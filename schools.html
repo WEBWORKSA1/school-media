@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>School Directory — Search, Filter &amp; Compare Schools | School.Media</title>
+<meta name="description" content="Search private, public, charter, international, Montessori, boarding and online schools. Filter by tuition, curriculum and features, compare side by side and request info.">
+<link rel="canonical" href="https://school.media/schools.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="School.Media">
+<meta property="og:title" content="School Directory — Search, Filter &amp; Compare Schools | School.Media">
+<meta property="og:description" content="Search private, public, charter, international, Montessori, boarding and online schools. Filter by tuition, curriculum and features, compare side by side and request info.">
+<meta property="og:url" content="https://school.media/schools.html">
+<meta property="og:image" content="https://school.media/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem('sm_theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="directory">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Schools</div>
+    <h1>School Directory</h1>
+    <p>Search and compare private, public, charter, international, Montessori, boarding and online schools. Save favourites, compare up to four side by side, and request info in one click.</p>
+    <div class="notice" style="margin-top:12px">ℹ️ Launch preview: listings shown are sample profiles that demonstrate the directory. Schools can <a href="for-schools.html#list">claim or add a real profile</a>.</div>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="container dir-layout">
+    <form class="filters" id="filters" onsubmit="return false">
+      <h4>Search</h4>
+      <input type="search" id="q" placeholder="Name, city, curriculum…" aria-label="Search schools">
+      <h4>School type</h4><div id="fType"></div>
+      <h4>Country</h4><select id="fCountry" aria-label="Country"></select>
+      <h4>Max tuition (per year) · <span id="tuitionVal">Any</span></h4>
+      <input type="range" id="fTuition" min="0" max="70000" step="2500" value="70000" style="width:100%" aria-label="Maximum tuition">
+      <h4>Features</h4><div id="fFeat"></div>
+      <h4>Admissions</h4><label><input type="checkbox" id="fAid"> Offers financial aid</label>
+      <button type="button" class="btn btn-ghost btn-sm btn-block" id="resetFilters" style="margin-top:16px">Reset filters</button>
+      <div class="ad-slot sidebar-ad" data-ad="sidebar" style="margin-top:20px"></div>
+    </form>
+    <div>
+      <div class="toolbar"><b id="count">Loading…</b>
+        <label style="display:flex;gap:8px;align-items:center;font-size:.9rem">Sort <select id="sort" style="width:auto"><option value="featured">Recommended</option><option value="rating">Top rated</option><option value="tuition">Lowest tuition</option><option value="name">A–Z</option></select></label></div>
+      <div class="grid g2" id="results"></div>
+      <div class="card" style="margin-top:28px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <div><h3 style="margin:0">Overwhelmed by options?</h3><p class="muted" style="margin:4px 0 0">Get a personalised, ranked shortlist in 2 minutes.</p></div>
+        <a class="btn btn-primary" href="match.html">Start free School Match</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>School Profile | School.Media</title>
+<meta name="description" content="School profile with tuition, admissions, reviews, events and a free info request.">
+<link rel="canonical" href="https://school.media/school.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="School.Media">
+<meta property="og:title" content="School Profile | School.Media">
+<meta property="og:description" content="School profile with tuition, admissions, reviews, events and a free info request.">
+<meta property="og:url" content="https://school.media/school.html">
+<meta property="og:image" content="https://school.media/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem('sm_theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="school">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="schools.html">Schools</a> / <span id="crumb"></span></div>
+    <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <div class="school-logo" id="sLogo" style="width:76px;height:76px;font-size:1.6rem"></div>
+      <div style="flex:1;min-width:240px"><h1 id="sName" style="font-size:clamp(1.7rem,4vw,2.6rem);margin:0">Loading…</h1><div class="meta" id="sMeta" style="margin-top:6px"></div></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-primary" href="#inquire">Request info</a><button class="btn btn-ghost" id="sCompare" data-compare="">⚖️ Compare</button><button class="btn btn-ghost bookmark" id="sSave" data-bookmark="">☆ Save</button></div>
+    </div>
+    <div class="notice hidden" id="sampleNote" style="margin-top:14px">ℹ️ This is a sample profile. Is this your school? <a href="for-schools.html#list">Claim or create your real profile</a>.</div>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="container article-layout">
+    <div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" onclick="location.hash='overview'">Overview</button>
+        <button class="tab" onclick="location.hash='admissions'">Admissions</button>
+        <button class="tab" onclick="location.hash='reviews'">Reviews</button>
+        <button class="tab" onclick="location.hash='events'">Events</button>
+      </div>
+      <div id="overview" class="card"><h2 style="font-size:1.4rem">About <span class="js-school-name"></span></h2><p id="sDesc"></p><h3>Programs, features & sports</h3><div class="chips" id="sFeatures"></div></div>
+      <div class="ad-slot" data-ad="inArticle"></div>
+      <div id="admissions" class="card"><h2 style="font-size:1.4rem">Key facts & admissions</h2><dl class="kv" id="sFacts"></dl></div>
+      <div id="events" class="card" style="margin-top:20px"><h2 style="font-size:1.4rem">Upcoming events</h2><div id="sEvents"></div>
+        <h3 style="margin-top:20px">Book a private tour</h3>
+        <form class="form" data-form="tour-request" data-success-title="Tour requested!" data-success-msg="The admissions team will contact you to confirm a date and time.">
+          <input type="hidden" name="school" id="tourSchool">
+          <div class="form-row"><div class="field"><label>Parent name</label><input type="text" name="name" required></div><div class="field"><label>Email</label><input type="email" name="email" required></div></div>
+          <div class="form-row"><div class="field"><label>Preferred date</label><input type="date" name="date" required></div><div class="field"><label>Time</label><select name="time"><option>Morning</option><option>Afternoon</option><option>Evening (virtual)</option></select></div></div>
+          <label class="check"><input type="checkbox" name="consent" value="yes" required> Share my details with this school to arrange the tour.</label>
+          <button class="btn btn-primary" type="submit">Request tour</button>
+        </form>
+      </div>
+      <div id="reviews" class="card" style="margin-top:20px"><h2 style="font-size:1.4rem">Parent & student reviews</h2>
+        <div id="reviewsList" class="grid" style="gap:12px;margin-bottom:20px"></div>
+        <details class="faq"><summary>✍️ Write a review</summary>
+          <form class="form" data-form="school-review" data-success="toast" style="margin-top:14px">
+            <div class="form-row"><div class="field"><label>Rating</label><select name="stars" required><option value="5">★★★★★ Excellent</option><option value="4">★★★★ Good</option><option value="3">★★★ OK</option><option value="2">★★ Poor</option><option value="1">★ Very poor</option></select></div>
+            <div class="field"><label>I am a</label><select name="role"><option>Parent</option><option>Student</option><option>Alumni</option><option>Staff</option></select></div></div>
+            <div class="field"><label>Your review</label><textarea name="review" required minlength="40" placeholder="What stands out? Teaching, community, communication, facilities…"></textarea></div>
+            <div class="field"><label>Email (not shown)</label><input type="email" name="email" required></div>
+            <label class="check"><input type="checkbox" name="honest" value="yes" required> My review is honest and based on my own experience.</label>
+            <button class="btn btn-primary" type="submit">Submit review</button>
+          </form></details>
+      </div>
+    </div>
+    <aside class="sidebar">
+      <div class="card" id="inquire" style="border:2px solid var(--brand)">
+        <h3>📩 Request information</h3>
+        <p class="muted" style="font-size:.9rem">Get the brochure, tuition & aid details and admissions dates from <b class="js-school-name"></b>.</p>
+        <form class="form" data-form="school-inquiry" data-success-title="Request sent!" data-success-msg="The admissions team usually responds within 1 business day. Want more options?" data-next="match.html" data-next-label="Get more matches">
+          <input type="hidden" name="school" id="inqSchool">
+          <div class="field"><label>Parent / guardian name</label><input type="text" name="name" required></div>
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="For a faster response"></div>
+          <div class="form-row"><div class="field"><label>Student grade</label><select name="grade" required><option value="">—</option><option>Pre-K</option><option>K–2</option><option>3–5</option><option>6–8</option><option>9–12</option></select></div>
+          <div class="field"><label>Start</label><select name="start"><option>Next year</option><option>This term</option><option>Later</option></select></div></div>
+          <div class="field"><label>Question (optional)</label><textarea name="message" style="min-height:70px"></textarea></div>
+          <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree that this school may contact me by email/phone about admissions.</label>
+          <button class="btn btn-primary btn-block" type="submit">Send my request</button>
+        </form>
+      </div>
+      <div class="ad-slot sidebar-ad" data-ad="sidebar" style="margin:0"></div>
+      <div class="card"><h3>Share</h3><div class="share"><button class="btn btn-ghost btn-sm" data-share="whatsapp">WhatsApp</button><button class="btn btn-ghost btn-sm" data-share="facebook">Facebook</button><button class="btn btn-ghost btn-sm" data-share="copy">🔗 Copy</button></div></div>
+    </aside>
+  </div>
+</section>
+<section class="section-sm"><div class="container"><h2>Similar schools</h2><div class="grid g3" id="similar"></div></div></section>
+<div class="sticky-cta"><a class="btn btn-primary" href="#inquire">📩 Request info</a><a class="btn btn-ghost" href="#events">📅 Book a tour</a></div>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>
