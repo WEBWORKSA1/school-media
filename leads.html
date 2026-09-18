@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lead Inbox (Admin) | School.Media</title>
+<meta name="description" content="Local lead inbox.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://school.media/leads.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="School.Media">
+<meta property="og:title" content="Lead Inbox (Admin) | School.Media">
+<meta property="og:description" content="Local lead inbox.">
+<meta property="og:url" content="https://school.media/leads.html">
+<meta property="og:image" content="https://school.media/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem('sm_theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="leads">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-hero"><div class="container"><h1>Lead Inbox</h1><p>Admin view of form submissions stored in <b>this browser</b> (demo mode / backup). In production, leads are delivered to the endpoint set in <code>assets/js/config.js</code>.</p><div class="notice" id="endpointStatus"></div></div></section>
+<section class="section-sm"><div class="container">
+<div class="toolbar"><b id="lcount"></b><div style="display:flex;gap:8px;flex-wrap:wrap"><select id="lf" style="width:auto" aria-label="Filter by form"></select><button class="btn btn-primary btn-sm" id="lexport">⬇ Export CSV</button><button class="btn btn-ghost btn-sm" id="lclear">Clear</button></div></div>
+<div class="card table-wrap" id="ltable" style="padding:0"></div>
+</div></section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>
