@@ -1,0 +1,12 @@
+# School.Media
+> The media network for schools: school directory & comparisons, free School Match, scholarships, student contests, education videos, guides and an education jobs board.
+
+## Key pages
+- [School Directory](https://school.media/schools.html): search, filter and compare schools
+- [School Match](https://school.media/match.html): free personalised school shortlist
+- [Scholarships](https://school.media/scholarships.html)
+- [Contests & Awards](https://school.media/contests.html)
+- [News & Guides](https://school.media/news.html)
+- [Videos](https://school.media/videos.html)
+- [Jobs & Talent](https://school.media/jobs.html)
+- [For Schools](https://school.media/for-schools.html): listings, enrollment leads, advertising
